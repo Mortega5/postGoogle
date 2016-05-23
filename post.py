@@ -22,6 +22,7 @@ for cookie in cookies:
     
 driver.get('https://plus.google.com/')
 time.sleep(3)
+
 if (len(sys.argv)>1):
   text = sys.argv[1]
 else:
