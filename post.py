@@ -3,7 +3,6 @@
 from selenium import webdriver
 import time, pickle, sys
 
-print sys.argv
 driver = webdriver.Chrome('./chromedriver')
 driver.get('https://plus.google.com/')
 cookies = pickle.load(open("cookies.pkl", "rb"))
@@ -21,7 +20,7 @@ for cookie in cookies:
     driver.add_cookie(new_cookie)
     
 driver.get('https://plus.google.com/')
-time.sleep(3)
+time.sleep(1)
 
 if (len(sys.argv)>1):
   text = sys.argv[1]
@@ -36,8 +35,9 @@ textbox.click()
 textInput = driver.find_element_by_class_name('df')
 
 textInput.send_keys(text)
+sendButtonText ="//div[contains(@class, 'd-k-l') and contains(@class, 'b-c-Ba')]"
 
-sendButtonText=".//*[contains(text(),'Compartir') and contains(concat(' ', @class, ' '), 'd-k-l')]"
+#sendButtonText=".//*[contains(text(),'Compartir') and contains(concat(' ', @class, ' '), 'd-k-l')]"
 
 sendButton = driver.find_element_by_xpath(sendButtonText)
 

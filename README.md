@@ -7,8 +7,3 @@ Run `python getCookies.py` and log in with the account that you want publish, an
 generate `cookies.pkl` file with your cookies.
 
 Once you have a `cookies.pkl` file, execute `python post.py ["text"]`. If text is empty, a default text will be published.
-
-
-## NOTE
-
-At this moment only support spanish version. If you want publish using other Google+ language you must change 'Compartir' text at the line 40 by your share button text.
