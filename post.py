@@ -22,13 +22,11 @@ for cookie in cookies:
     
 driver.get('https://plus.google.com/')
 time.sleep(3)
-# Coger texto de los argumentos
 if (len(sys.argv)>1):
   text = sys.argv[1]
 else:
   text = "Who needs a public API when you can 'hack' google plus to publish using selenium?"
 
-#selector necesario para postear
 xpath=".//*[contains(text(),'¿Tienes algo nuevo que contar?')]"
 textbox = driver.find_element_by_xpath(xpath);
 

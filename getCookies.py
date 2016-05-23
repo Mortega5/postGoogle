@@ -4,9 +4,8 @@ from selenium import webdriver
 import time, pickle
 
 driver = webdriver.Chrome('./chromedriver')
-print "Se esta abriendo una ventana en chrome."
+print "Chrome browser will be opened."
 driver.get("http://www.plus.google.com")
-mode=raw_input('Presiona enter cuando te hayas registrado.')
-# esperar a que se inicie session
+mode=raw_input('Press enter when you have registered.')
 
-pickle.dump( driver.get_cookies() , open("cookies2.pkl","wb"))
+pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
