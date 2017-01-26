@@ -31,11 +31,12 @@ xpath=".//*[contains(text(),'¿Tienes algo nuevo que contar?')]"
 textbox = driver.find_element_by_xpath(xpath);
 
 textbox.click()
+time.sleep(0.8)
 
-textInput = driver.find_element_by_class_name('df')
-
+textInput = driver.find_element_by_id('XPxXbf')
 textInput.send_keys(text)
-sendButtonText ="//div[contains(@class, 'd-k-l') and contains(@class, 'b-c-Ba')]"
+
+sendButtonText ="//div[contains(@class, 'O0WRkf') and contains(@class, 'zZhnYe')]"
 
 #sendButtonText=".//*[contains(text(),'Compartir') and contains(concat(' ', @class, ' '), 'd-k-l')]"
 
@@ -43,6 +44,5 @@ sendButton = driver.find_element_by_xpath(sendButtonText)
 
 sendButton.click()
 
-time.sleep(3)
-
+time.sleep(2)
 driver.quit()
